@@ -1,14 +1,12 @@
 import numpy as np
-import cv2
 import skimage.io
 
 from skimage import measure
-from skimage.io import imread, imsave, imshow
+from skimage.io import imread, imsave
 from skimage.transform import resize
-from skimage.filters import gaussian
 from skimage.morphology import dilation, disk
-from skimage.draw import polygon, polygon_perimeter, polygon2mask
-import matplotlib.pyplot as plt
+from skimage.draw import  polygon_perimeter, polygon2mask
+
 
 CLASSES = 3
 
@@ -54,9 +52,7 @@ def detect_caries(filepath, unet_like):
         frame[contour_overlay == 1] = rgb_colors[2]
     except:
         pass
-    #plt.imshow(frame)
-    #plt.show()
-    print(f"{filepath.split('.')[0]}_caries.{filepath.split('.')[-1]}")
+
     imsave(f"{filepath.split('.')[0]}_caries.{filepath.split('.')[-1]}", frame)
     return f"{filepath.split('.')[0]}_caries.{filepath.split('.')[-1]}"
 
