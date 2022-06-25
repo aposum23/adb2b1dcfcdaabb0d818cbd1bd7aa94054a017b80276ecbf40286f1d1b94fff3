@@ -1,3 +1,4 @@
+print('1')
 """
 WSGI config for HacaKaka project.
 

@@ -2,6 +2,10 @@
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
+from cnn import init_cnn
+
+
+unet_like = init_cnn()
 
 
 def main():

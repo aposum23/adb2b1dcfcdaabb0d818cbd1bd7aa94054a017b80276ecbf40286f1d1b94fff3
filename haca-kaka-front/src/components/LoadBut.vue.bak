@@ -13,9 +13,9 @@
        с использованием вспышки для более точного результата</p>
     </div>
     <div class="show" v-if="page == true">
-      <img :src="photo1" class="photo">
+      <img src="../0_1.jpg" class="photo">
       <div class="label" v-on:click="uploadFile()">
-        <a :href="photo1" :download="photo_name">Скачать фото</a>
+        <a :href="../0_1.jpeg" download="photography">Скачать фото</a>
       </div>
       <div class="back" v-on:click="backToLoad()">
         <label>Вернуться назад</label>
@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import axios from 'axios';
+import axios from 'axios'
 
 export default {
   name: 'load-but',
@@ -35,8 +35,7 @@ export default {
       photo: null,
       imageSrc: null,
       photo1: null,
-      photo_name: '',
-      publicPath: process.env.BASE_URL
+      is_ill: false,
     }
   },
   methods:{
@@ -45,46 +44,10 @@ export default {
       btn.click();
     },
 
-    getBase64Image(img) {
-        // Create an empty canvas element
-        var canvas = document.createElement("canvas");
-        canvas.width = img.width;
-        canvas.height = img.height;
-
-        // Copy the image contents to the canvas
-        var ctx = canvas.getContext("2d");
-        ctx.drawImage(img, 0, 0);
-
-        // Get the data-URL formatted image
-        // Firefox supports PNG and JPEG. You could check img.src to
-        // guess the original format, but be aware the using "image/jpg"
-        // will re-encode the image.
-        var dataURL = canvas.toDataURL("image/jpeg");
-
-        return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
-    },
-
     getResult(data){
-      var file = this.dataURLtoFile(data, 'photo.jpg');
-      this.photo1 = URL.createObjectURL(file);
-      this.photo_name = file.name;
-      console.log(this.photo1);
+      console.log(data);
+      this.photo1 = data[0].img;
       this.page = !this.page;
-    },
-
-    dataURLtoFile(dataurl, filename) {
-        console.log(dataurl.split("''"));
-        var arr = dataurl.split("'"),
-            mime = arr[0].match(/:(.*?);/)[1],
-            bstr = window.atob(arr[1]), 
-            n = bstr.length, 
-            u8arr = new Uint8Array(n);
-            
-        while(n--){
-            u8arr[n] = bstr.charCodeAt(n);
-        }
-        
-        return new File([u8arr], filename, {type:mime});
     },
 
     loadFile(){
@@ -93,7 +56,6 @@ export default {
 
       let formData = new FormData();
 			formData.append('photo', this.photo);
-      console.log(formData);
 			axios.post('http://127.0.0.1:8000/photo_anal',
 				formData, {
 				headers: {
