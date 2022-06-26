@@ -28,7 +28,7 @@
     </ul>
     <li>Шальнев Владимир - ML разработчик</li>
     <ul>
-      <li>Telegram: <a href=""></a></li>
+      <li>Telegram: <a href="https://t.me/bor4sh">@bor4sh</a></li>
       <li>Почта: <a href="mailto:vovik0312@gmail.com">vovik0312@gmail.com</a></li>
     </ul>
     <li>Духно Михаил - Web разработчик</li>
