@@ -1,4 +1,4 @@
-<h1>Dentist Helper - умный помощних в зубных вопросах</h1>
+<h1>Dentist Helper - умный помощник в зубных вопросах</h1>
 <br/>
 <p>Dentist Helper - это веб приложение, которое при помощи технологий искусственного интелекта находит очаги кариеса на фотографии ваших зубов и в случае необходимости даёт рекомендацию по обращению в стоматологическую клинику.</p>
 <br/>
@@ -37,3 +37,8 @@
       <li>Почта: <a href="mailto:misha.duhno@mail.ru">misha.duhno@mail.ru</a></li>
     </ul>
   </ol>
+<h2>Ссылки</h2>
+<ul>
+  <li><a href="https://disk.yandex.ru/i/aJK6oyZY-qqjCg">Screencast</a></li>
+  <li><a href="https://disk.yandex.ru/d/YfDkNJpHr0ArPQ">Обученные модели нейросетей</a></li>
+</ul>
