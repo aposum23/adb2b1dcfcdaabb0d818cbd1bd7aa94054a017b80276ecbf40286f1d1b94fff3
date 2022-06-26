@@ -23,7 +23,7 @@
   <ol>
     <li>Выходцев Егор - ML разработчик</li>
     <ul>
-      <li>Вконтакте: <a href="https://vk.com/n0n4m">n0n4m</a></li>
+      <li>Вконтакте: <a href="https://vk.com/n0n4m">@n0n4m</a></li>
       <li>Почта: <a href="mailto:vyhodcev.ncfu@bk.ru">vyhodcev.ncfu@bk.ru</a></li>
     </ul>
     <li>Шальнев Владимир - ML разработчик</li>
@@ -33,7 +33,7 @@
     </ul>
     <li>Духно Михаил - Web разработчик</li>
     <ul>
-      <li>Вконтакте: <a href="https://vk.com/mishadukhno">mishadukhno</a></li>
+      <li>Вконтакте: <a href="https://vk.com/mishadukhno">@mishadukhno</a></li>
       <li>Почта: <a href="mailto:misha.duhno@mail.ru">misha.duhno@mail.ru</a></li>
     </ul>
   </ol>
